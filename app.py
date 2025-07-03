@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import pipeline
 def local_css(file_name):
-    with open(file_name) as f:
+  
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Load the HuggingFace GPT-2 model
@@ -13,7 +13,6 @@ generator = load_generator()
 
 # Streamlit app layout
 st.title(" AI Story Generator")
-local_css("design.css")
 prompt = st.text_area("Enter your story prompt:")
 
 if st.button("Generate Story"):
